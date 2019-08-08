@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/justarya/musicbit/issues"
   },
-  "homepage": "https://github.com/justarya/musicbit#readme"
+  "homepage": "https://github.com/justarya/musicbit#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
 }

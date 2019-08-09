@@ -37,6 +37,7 @@ function initial(){
       $('#spotify--login').show();
     }
   }else{
+    loadKanye();
     $('#spotify--login').hide();
     $('#main').show();
     $('#music-stats').hide();
@@ -45,6 +46,8 @@ function initial(){
 function loadData(){
   loadWelcome();
   loadBestTrack();
+  loadGenre();
+  loadTime();
 }
 function loadWelcome(){
   $.ajax({
@@ -79,10 +82,34 @@ function loadBestTrack(){
     $('#top-track-2 .track--desc__title h1').text(tracksCollection.items[1].name)
     $('#top-track-2 .track--desc__artist span').text(tracksCollection.items[1].artists[0].name)
 
-
+    for(let i in tracksCollection.items){
+      const html = `
+      <div class="track--item">
+        <img src="${tracksCollection.items[i].album.images[0].url}" alt="">
+        <div class="track--desc">
+          <div class="track--desc__title">
+            <span>${tracksCollection.items[i].name}</span>
+          </div>
+        </div>
+      </div>
+      `
+      $('.track--item--container').append(html);
+    }
   })
   .fail((jqXHR,err) => {
     console.error(jqXHR)
+  })
+}
+function loadKanye(){
+  $.ajax({
+    url: 'http://localhost:3000/music/kanye'
+  }).done(data => {
+    console.log('test',data)
+    $('#kanye').prepend(`<h3> ${data.kanyeQuote}</h3>`)
+  })
+  .fail(err => {
+    console.log('test')
+    console.log(err);
   })
 }
 function loadTime(){
@@ -93,9 +120,34 @@ function loadTime(){
       spotify_token: localStorage.getItem('spotify_token')
     }
   })
-  .done(({tracksCollection}) => {
-    console.log(tracksCollection.items[0]);
-    $('#current-listening-time .count').text(tracksCollection.realTime)
+  .done((data) => {
+    console.log('time',data);
+    $('#current-listening-time .count').text(Math.round(data.realTime))
+
+  })
+  .fail((jqXHR,err) => {
+    console.error(jqXHR)
+  })
+}
+function loadGenre(){
+  $.ajax({
+    method: 'post',
+    url: 'http://localhost:3000/music/getGenre',
+    data: {
+      spotify_token: localStorage.getItem('spotify_token')
+    }
+  })
+  .done(({map}) => {
+    let max = 0;
+    let top; 
+    for(let key in map){
+      if(max < map[key]){
+        max = map[key];
+        top = key;
+      }
+    }
+    console.log(top);
+    $('#genre').text(top)
 
   })
   .fail((jqXHR,err) => {

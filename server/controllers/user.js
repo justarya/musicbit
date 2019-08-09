@@ -8,30 +8,31 @@ class User {
   static login(req,res,next){
     let googlePayload;
     client
-      .verifyIdToken({
-        idToken: req.body.id_token,
-        audience: process.env.CLIENT_ID
+    .verifyIdToken({
+      idToken: req.body.id_token,
+      audience: process.env.CLIENT_ID
+    })
+    .then(ticket => {
+      googlePayload = ticket.getPayload();
+      // res.json(payload);
+      return Model.User
+      .findOne({
+        email: googlePayload.email
       })
-      .then(ticket => {
-        googlePayload = ticket.getPayload();
-        // res.json(payload);
+    })
+    .then(user => {
+      console.log('test')
+      if(!user){
         return Model.User
-        .findOne({
-          email: googlePayload.email
+        .create({
+          email: googlePayload.email,
+          username: googlePayload.name.replace(/\s/g, '').toLowerCase(),
+          password: process.env.PASSWORD
         })
-      })
-      .then(user => {
-        if(!user){
-          return Model.User
-            .create({
-              email: googlePayload.email,
-              username: googlePayload.name.replace(/\s/g, '').toLowerCase(),
-              password: process.env.PASSWORD
-            })
-        }
-        return user
-      })
-      .then(data => {
+      }
+      return user
+    })
+    .then(data => {
         let payload = {
           id: data._id,
           username: data.username,

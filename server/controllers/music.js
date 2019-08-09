@@ -90,18 +90,18 @@ class Music {
     }
 
     static getKanye(req,res){
-      axios.get('https://api.kanye.rest'
-      )
+      axios.get('https://api.kanye.rest')
       .then(function (response) {
+        console.log(response)
         const kanyeQuote = response.data.quote
         res.status(200).json({
-            kanyeQuote
+          kanyeQuote
         });
       })
       .catch(function (error) {
         console.log(error)
         res.status(500).json({
-            message: error.message
+          message: error.message
         })
       })
     }

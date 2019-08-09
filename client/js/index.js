@@ -9,7 +9,19 @@ $('document').ready(function(){
   });
   initial();
   console.log('init')
+  // login oAuth
+  $.ajax({
+    url: 'http://localhost:3000/music/kanye'
+  }).done(data => {
+    console.log(data)
+    $('#kanye').prepend(`<h3> ${data.kanyeQuote}t</h3>`)
+
+  })
+  .fail(err => {
+    console.log(err);
+  })
 })
+
 function initial(){
   if(isSignIn()){
     $('#main').hide();

@@ -16,9 +16,9 @@ class User {
         googlePayload = ticket.getPayload();
         // res.json(payload);
         return Model.User
-          .findOne({
-            email: googlePayload.email
-          })
+        .findOne({
+          email: googlePayload.email
+        })
       })
       .then(user => {
         if(!user){
@@ -38,6 +38,7 @@ class User {
           email: data.email
         }
         let encryptedPayload = jwt.generateToken(payload)
+        console.log(encryptedPayload);
         res.json(encryptedPayload);
       })
       .catch(next);

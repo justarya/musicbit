@@ -1,0 +1,105 @@
+/*# sourceMappingURL=style.css.map */
+#main{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .container .box {
+    width: 25%;
+    float: left;
+  }
+  
+  .container .box .chart {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 110px;
+  }
+  
+  .container .box canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  .box h4 {
+    text-align: center;
+  }
+  
+  .chart1 {
+    background-color: none;
+  }
+  
+  #chart2 {
+    max-width: 400px;
+    max-height: 400px;
+  }
+  
+  /* --------- main ------------ */
+  .main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* --------- title ------------ */
+  .title {
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+  
+  .title h1 {
+    font-size: 100px;
+    font-style: bold;
+    color: #fff;
+  }
+  
+  p {
+    color: #fff;
+    text-align: center
+  }
+  
+  /* getstarted */
+  .btn-start {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+  
+  .btn-start .btn-outline-secondary {
+    border-radius: 20px;
+    /* color: #fff;
+    border-color: #fff; */
+    padding-right: 2rem;
+    padding-left: 2rem;
+    transition: 0.7s;
+  }
+  
+  .btn-start .btn-outline-secondary:hover {
+    color: #fff;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  
+  
+  .title-label{
+    margin-top: 4rem !important;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .charset .btn-group {
+    text-align: center;
+  }
+}

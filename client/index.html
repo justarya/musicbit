@@ -1,75 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>HackgivGit</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Muli|Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<meta name="google-signin-client_id" content="746805424832-bjk978qfjnv0mu71qtf0hhaqtt5h4d17.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-<link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- chart -->
+        <!-- 3d doughnat -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+        <!-- circle -->
+        <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
+        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+
+        <!-- line -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <!-- highchart close -->
+
+
+    <title>MUSIC BIT</title>
 </head>
-<body>
 
 
-<div class="topnav">
-  <a href="#" id="top-right"><i class="fab fa-github"></i> jackbloo</a>
-  <a id="signout" href="#" onclick="signOut();"><i class="fas fa-sign-out-alt"></i></a>
-  <h3 id="left-nav">HackgivGit</h3>
-</div>
-
-<div class="row">
-  <div class="column left">
-    <div class="container">
-        <h2 id="users">Users</h2>
-        <ul id="userr" style="list-style: none;">
-          <div>
-              <li id="star" class="box" >My top artist</li>
-          </div>
-          <div>
-            <li id="jackbloo" class="box" >My top tracks</li>
-          </div>
-          <div>
-            <li id="billy" class="box">My recommendation</li>
-          </div>
-
+<body class="">
+    <div class="main">
+        <div class="title">
+            <h1>MUSIC BIT</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor</p>
+            <p>sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+        <div class="btn-start">
+            <button type="button" class="btn btn-outline-secondary" href="#">GETTING STARTED</button>
+        </div>
     </div>
-  </div>
-  
-  <div class="column mid">
-    <div class="container1">
-        <input id="myInput" type="text" placeholder="search repo name..">
-        <h2 id="repo">Repositories</h2>
-        <ul id="repos-list">
-        </ul>
-    </div>
-    <div class="signIn">
-      <img src="https://og.github.com/mark/github-mark@1200x630.png" style="width: 200px; height: 100px;" alt="">
-      <h1>HacktivGit</h1> 
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-    <form id="spotify-form">
-        <input type="submit">
-      </form>
+    <!-- chart-content -->
+    <div class="container" style="display: none">
+        
+        
+        <h3 class="title-label" style="text-align: center"> category 1</h3>
+        <div class="">
+            <div class="box">
+                <div class="chart mb-3" data-percent="73">73%</div>
+                <h4>lorem</h4>
+            </div>
+            <div class="box">
+                <div class="chart mb-3" data-percent="83">83%</div>
+                <h4>lorem</h4>
+            </div>
+            <div class="box">
+                <div class="chart mb-3" data-percent="93">93%</div>
+                <h4>lorem</h4>
+            </div>
+            <div class="box">
+                <div class="chart mb-3" data-percent="50">50%</div>
+                <h4>lorem</h4>
+            </div>
+        </div>
+
+        <!-- chart -->
+        <br>
+        <h3 class="title-label">category 2</h3>
+        <div class="row charset">
+
+            <div class="col-md-6">
+                <div id="3d-doughnut"></div>
+                <!-- button 3D 2D -->
+                <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons" style="text-align: center;">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                    </label>
+                </div> -->
+            </div>
+            
+            <!-- <div class="col-md-6" style="display: none">
+                <div id="circle"></div>
+            </div> -->
+
+            <div class="col-md-6">
+                <div id="chart-line"></div>
+            </div>
+            
+        </div>
+        <!-- <br><br> -->
     </div>
 
     
-  </div>
-  
-  <div class="column right">
-    <div class="container2">
-        <h2>Create Git Repository</h2>
+    <!-- basic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    </div>
-    </div>
-  </div>
-</div>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- chart -->
+    <script src="./js/many-circle.js"></script>
+    <script>
+        $(function () {
+            $('.chart').easyPieChart({
+                //additional here
+            })
+        })
+    </script>
+
+    <script src="./js/line.js"></script>
+    <script src="./js/3d-doughnuts.js"></script>
+    <script src="./js/circle.js"></script>
+
 </body>
 </html>

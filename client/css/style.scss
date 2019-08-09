@@ -1,0 +1,145 @@
+$box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+*{
+  padding: 0;
+  margin:0;
+  // font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Hind', sans-serif;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+#hello{
+  background-image: linear-gradient(rgb(83, 255, 92), rgb(0, 68, 95));
+}
+section {
+  min-height: 100vh;
+  clear: both;
+  display: block;
+  background-attachment: fixed;
+  .msg--big{
+    padding:10vh 0;
+
+    h2{
+      line-height: 1em;
+      margin: 15px 0;
+      font-size: 4em  ;
+    }
+    h1{
+      line-height: 1em;
+      margin: 20px 0;
+      font-size: 6em;
+    } 
+  }
+
+  .title{
+    padding-top: 90px;
+    h1{
+      line-height: 1em;
+      margin: 20px 0;
+      font-size: 4em;
+    }
+  }
+  .center{
+    padding: 20vh 0;
+  }
+
+  .track{
+    padding: 70px 0;
+    // padding-top: 15vh;
+    padding-left: 70px;
+    position: relative;
+    display: inline-block;
+
+    .album-art{
+      width: 350px;
+      height: 350px;
+      background-size: cover;
+      box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+      float: left;
+    }
+    .track-top-number{
+      font-weight: bold;
+      font-size: 70px;
+      color: white;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      span{
+        font-size: 50px;
+      }
+    }
+    .track--desc{
+      padding: 10px 40px;
+      height: 300px;
+      float: left;
+  
+      .track--desc__title{
+        font-size: 2.5em;
+        line-height: 1.5em;
+      }
+      .track--desc__artist{
+        span{
+          font-size: 25px;
+          background: white;
+          padding: 0px 10px;
+          display: inline-block;
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+  .track--item--container{
+    display: flow-root;
+    padding-bottom: 40px;
+  }
+  .track--item{
+    float: left;
+    width: 25%;
+    padding-top: 50px;
+    padding-left: 40px;
+    img{
+      width: 100%;
+      transition: 0.2s;
+    }
+    img:hover{
+      box-shadow: $box-shadow;
+    }
+    .album-art{
+      width: 200px;
+      height: 200px;
+      background-size: cover; 
+    }
+    .track--desc__title{
+      padding-top: 10px;
+      font-size: 25px;
+      margin-top: -40px;
+      margin-left: -20px;
+      span{
+        background: white;
+        padding: 5px 10px;
+        font-weight: normal;
+      }
+    }
+
+  }
+}
+
+    

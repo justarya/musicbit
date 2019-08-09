@@ -1,271 +1,106 @@
-<<<<<<< HEAD
-* {
-  padding: 0;
-  margin: 0;
-  font-family: 'Hind', sans-serif;
-}
-
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-#hello {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#53ff5c), to(#00445f));
-  background-image: linear-gradient(#53ff5c, #00445f);
-}
-
-section {
-  min-height: 100vh;
-  clear: both;
-  display: block;
-  background-attachment: fixed;
-}
-
-section .msg--big {
-  padding: 10vh 0;
-}
-
-section .msg--big h2 {
-  line-height: 1em;
-  margin: 15px 0;
-  font-size: 4em;
-}
-
-section .msg--big h1 {
-  line-height: 1em;
-  margin: 20px 0;
-  font-size: 6em;
-}
-
-section .title {
-  padding-top: 90px;
-}
-
-section .title h1 {
-  line-height: 1em;
-  margin: 20px 0;
-  font-size: 4em;
-}
-
-section .center {
-  padding: 20vh 0;
-}
-
-section .track {
-  padding: 70px 0;
-  padding-left: 70px;
-  position: relative;
-  display: inline-block;
-}
-
-section .track .album-art {
-  width: 350px;
-  height: 350px;
-  background-size: cover;
-  -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-          box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-  float: left;
-}
-
-section .track .track-top-number {
-  font-weight: bold;
-  font-size: 70px;
-  color: white;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-section .track .track-top-number span {
-  font-size: 50px;
-}
-
-section .track .track--desc {
-  padding: 10px 40px;
-  height: 300px;
-  float: left;
-}
-
-section .track .track--desc .track--desc__title {
-  font-size: 2.5em;
-  line-height: 1.5em;
-}
-
-section .track .track--desc .track--desc__artist span {
-  font-size: 25px;
-  background: white;
-  padding: 0px 10px;
-  display: inline-block;
-  margin-left: -10px;
-}
-
-section .track--item--container {
-  display: flow-root;
-  padding-bottom: 40px;
-}
-
-section .track--item {
-  float: left;
-  width: 25%;
-  padding-top: 50px;
-  padding-left: 40px;
-}
-
-section .track--item img {
-  width: 100%;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-section .track--item img:hover {
-  -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-          box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-}
-
-section .track--item .album-art {
-  width: 200px;
-  height: 200px;
-  background-size: cover;
-}
-
-section .track--item .track--desc__title {
-  padding-top: 10px;
-  font-size: 25px;
-  margin-top: -40px;
-  margin-left: -20px;
-}
-
-section .track--item .track--desc__title span {
-  background: white;
-  padding: 5px 10px;
-  font-weight: normal;
-}
 /*# sourceMappingURL=style.css.map */
-=======
 *{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .container {
-    width: 1000px;
-    margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .container .box {
-    width: 25%;
-    float: left;
+  width: 25%;
+  float: left;
 }
 
 .container .box .chart {
-    position: relative;
-    width: 110px;
-    height: 110px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 20px;
-    line-height: 110px;
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  line-height: 110px;
 }
 
 .container .box canvas {
-    position: absolute;
-    left: 0;
-    right: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .box h4 {
-    text-align: center;
+  text-align: center;
 }
 
 .chart1 {
-    background-color: none;
+  background-color: none;
 }
 
 #chart2 {
-    max-width: 400px;
-    max-height: 400px;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 /* --------- main ------------ */
 .main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/bg.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/bg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
 /* --------- title ------------ */
 .title {
-    position: absolute;
-    top: 40%; 
-    left: 50%;
-    transform: translate(-50%, -50%)
+  position: absolute;
+  top: 40%; 
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .title h1 {
-    font-size: 100px;
-    font-style: bold;
-    color: #fff;
+  font-size: 100px;
+  font-style: bold;
+  color: #fff;
 }
 
 p {
-    color: #fff;
-    text-align: center
+  color: #fff;
+  text-align: center
 }
 
 /* getstarted */
 .btn-start {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .btn-start .btn-outline-secondary {
-    border-radius: 20px;
-    /* color: #fff;
-    border-color: #fff; */
-    padding-right: 2rem;
-    padding-left: 2rem;
-    transition: 0.7s;
+  border-radius: 20px;
+  /* color: #fff;
+  border-color: #fff; */
+  padding-right: 2rem;
+  padding-left: 2rem;
+  transition: 0.7s;
 }
 
 .btn-start .btn-outline-secondary:hover {
-    color: #fff;
-    padding-right: 3rem;
-    padding-left: 3rem;
+  color: #fff;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 
 .title-label{
-    margin-top: 4rem !important;
-    margin-bottom: 3rem;
-    text-align: center;
+  margin-top: 4rem !important;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .charset .btn-group {
-    text-align: center;
+  text-align: center;
 }
->>>>>>> 9b84fa84db170ecc316d45fbda70961120eae99b

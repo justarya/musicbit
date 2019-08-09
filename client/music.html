@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Music Bit</title>
+  <link href="https://fonts.googleapis.com/css?family=Hind|Lexend+Deca&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/vendors/wowjs/css/libs/animate.css">
+  <link rel="stylesheet" href="/css/music.css">
+</head>
+<body>
+  <div id="music-discovery">
+    <section id="hello">
+      <div class="container">
+        <div class="msg--big center">
+          <h2 class="wow fadeIn">Hello, Arya</h2>
+          <h1 class="wow bounceInLeft" data-wow-delay="1s">This your recent <br> Music Habits</h1>
+        </div>
+        <div class="next wow fadeIn" data-wow-delay="2s">
+          Scroll Down
+        </div>
+      </div>
+    </section>
+    <section id="top-track-1" class="size--min-full">
+      <div class="container">
+        <div class="title">
+          <h1>Your best album tracks</h1>
+        </div>
+        <div class="track">
+          <div class="track-top-number"><span>#1</span></div>
+          <div class="album-art" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png')"></div>
+          <div class="track--desc">
+            <div class="track--desc__title">
+              <h1>Let it Happen</h1>
+            </div>
+            <div class="track--desc__artist">
+              <span>Tame Impala</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="top-track-2">
+      
+    </section>
+    <section id="current-listening-time">
+      <div class="container">
+        <div class="msg--big center">
+          <h2>Current Listening Time</h2>
+          <h1><span class="count">1042</span> Minutes</h1>
+        </div>
+      </div>
+    </section>
+    <section id="top-genre">
+      <div class="container">
+        <div class="title">
+        </div>
+        <div class="msg--big">
+          <h2>Your Top Genre</h2>
+          <h1>
+            Rock
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section id="stats-genre">
+      <div class="stats">
+  
+      </div>
+    </section>
+    <section id="top-tracks">
+      <div class="container">
+        <div class="title">
+          <h1>Top Tracks</h1>
+        </div>
+        <div class="track--item--container">
+  
+          <div class="track--item">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png" alt="">
+            <div class="track--desc">
+              <div class="track--desc__title">
+                <span>Let it happen</span>
+              </div>
+            </div>
+          </div>
+          <div class="track--item">
+            <a href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png" alt="">
+            </a>
+            <div class="track--desc">
+              <div class="track--desc__title">
+                <span>Let it happen</span>
+              </div>
+            </div>
+          </div>
+          <div class="track--item">
+            <a href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png" alt="">
+            </a>
+            <div class="track--desc">
+              <div class="track--desc__title">
+                <span>Let it happen</span>
+              </div>
+            </div>
+          </div>
+          <div class="track--item">
+            <a href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png" alt="">
+            </a>
+            <div class="track--desc">
+              <div class="track--desc__title">
+                <span>Let it happen</span>
+              </div>
+            </div>
+          </div>
+          <div class="track--item">
+            <a href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png" alt="">
+            </a>
+            <div class="track--desc">
+              <div class="track--desc__title">
+                <span>Let it happen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="/vendors/wowjs/js/wow.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  new WOW().init();
+  $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+  </script>
+</body>
+</html>

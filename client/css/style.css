@@ -106,4 +106,9 @@
 #main .charset .btn-group {
   text-align: center;
 }
+
+#main #3d-doughnut canvas {
+  width: 500px;
+  height: 400px;
+}
 /*# sourceMappingURL=style.css.map */

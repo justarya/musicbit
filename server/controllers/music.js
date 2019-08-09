@@ -3,7 +3,7 @@ const Model = require('../models');
 const jwt = require('../helpers/jwt');
 const checkWords = require('../helpers/checkWords')
 const SpotifyWebApi = require('spotify-web-api-node');
-const redirectUri = 'http://localhost:3000/music/callback/';
+const redirectUri = 'http://localhost:8080';
 const spotifyApi = new SpotifyWebApi({
   clientId : 'b93f9dfa22ea42c497b30e547849305c',
   clientSecret : '9cac2da6d7a1445694500ae88ddb2134',
@@ -107,6 +107,7 @@ class Music {
     }
 
     static getTime(req,res){
+      console.log('test')
       axios.get('https://api.spotify.com/v1/me/player/recently-played', {
         headers: {
           Authorization: `Bearer ${req.body.spotify_token}`
@@ -120,8 +121,7 @@ class Music {
           let waktu = recentCollection[i].track.duration_ms / 60000
             time.push(waktu)
         }
-          let realTime = time.reduce((a, b) => a + b, 0)
-
+        let realTime = time.reduce((a, b) => a + b, 0)
         res.status(200).json({
             realTime
         });
@@ -207,8 +207,8 @@ class Music {
 
     static signIn(req,res){
       const authorizeURL = spotifyApi.createAuthorizeURL(['user-top-read playlist-read-collaborative user-read-recently-played user-read-currently-playing user-read-recently-played']);
+      // console.log(authorizeURL)
       res.send(authorizeURL);
-      
     }
 
     static redirect(req,res){

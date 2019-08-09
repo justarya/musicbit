@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-signin-client_id" content="383156229925-le9tg6ei1naqmu11irgmo4c1e8s3hdvl.apps.googleusercontent.com">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   <!-- chart -->  
@@ -29,12 +29,12 @@
   <link rel="stylesheet" href="/vendors/wowjs/css/libs/animate.css">
   <link rel="stylesheet" href="/css/music.css">
 
-  <title>MUSIC BIT</title>
+  <title>Music Bit</title>
 </head>
 
 
 <body>
-  <div id="main" class="main">
+  <div id="main" class="main" style="display:none">
     <div class="title">
       <h1>MUSIC BIT</h1>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -46,24 +46,27 @@
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
   </div>
-  <div id="spotify--login">
+  <div id="spotify--login" style="display:none">
     <form action="" id="spotify-form">
       <button type="submit">Login to Spotify</button>
     </form>
   </div>
-  <div id="music-stats">
+  <div id="music-stats" style="display:none">
+    <nav>
+      <a href="javascript:void(0)" class="logout" onclick="signOut()">logout</a>
+    </nav>
     <section id="hello">
       <div class="container">
         <div class="msg--big center">
-          <h2 class="wow fadeIn">Hello, Arya</h2>
-          <h1 class="wow bounceInLeft" data-wow-delay="1s">This your recent <br> Music Habits</h1>
+          <h2 id="profile-name" class="wow fadeIn" data-wow-delay="1s"></h2>
+          <h1 class="wow bounceInLeft" data-wow-delay="2s">This your recent <br> Music Habits</h1>
         </div>
-        <div class="next wow fadeIn" data-wow-delay="2s">
+        <div class="next wow fadeIn" data-wow-delay="3s">
           Scroll Down
         </div>
       </div>
     </section>
-    <section id="top-track-1" class="size--min-full">
+    <section id="top-track-1" class="size--flex">
       <div class="container">
         <div class="title">
           <h1>Your best album tracks</h1>
@@ -82,10 +85,23 @@
         </div>
       </div>
     </section>
-    <section id="top-track-2">
-      
+    <section id="top-track-2" class="size--flex">
+      <div class="container">
+        <div class="track">
+          <div class="track-top-number"><span>#2</span></div>
+          <div class="album-art" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png')"></div>
+          <div class="track--desc">
+            <div class="track--desc__title">
+              <h1>Let it Happen</h1>
+            </div>
+            <div class="track--desc__artist">
+              <span>Tame Impala</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="current-listening-time">
+    <section id="current-listening-time" class="size--flex">
       <div class="container">
         <div class="msg--big center">
           <h2>Current Listening Time</h2>
@@ -93,7 +109,7 @@
         </div>
       </div>
     </section>
-    <section id="top-genre">
+    <section id="top-genre" class="size--flex">
       <div class="container">
         <div class="title">
         </div>
@@ -106,8 +122,13 @@
       </div>
     </section>
     <section id="stats-genre">
-      <div class="stats">
-  
+      <div class="container">
+        <div class="title">
+          <h1>Genre</h1>
+        </div>
+        <div class="stats">
+          <div id="3d-doughnut"></div>
+        </div>
       </div>
     </section>
     <section id="top-tracks">
@@ -172,19 +193,22 @@
   <script src="/vendors/wowjs/js/wow.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="/js/index.js"></script>
+  <script src="/js/line.js"></script>
+  <script src="/js/3d-doughnuts.js"></script>
+  <script src="/js/circle.js"></script>
   <script>
       new WOW().init();
-      $('.count').each(function () {
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
+      // $('.count').each(function () {
+      //   $(this).prop('Counter',0).animate({
+      //       Counter: $(this).text()
+      //   }, {
+      //       duration: 4000,
+      //       easing: 'swing',
+      //       step: function (now) {
+      //           $(this).text(Math.ceil(now));
+      //       }
+      //   });
+    // });
   </script>
 </body>
 </html>

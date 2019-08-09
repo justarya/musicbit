@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login Demo</title>
+<title>HackgivGit</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Muli|Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<meta name="google-signin-client_id" content="746805424832-bjk978qfjnv0mu71qtf0hhaqtt5h4d17.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-  <div class="logout">
-    <button onclick="signOut()">Logout</button>
+
+
+<div class="topnav">
+  <a href="#" id="top-right"><i class="fab fa-github"></i> jackbloo</a>
+  <a id="signout" href="#" onclick="signOut();"><i class="fas fa-sign-out-alt"></i></a>
+  <h3 id="left-nav">HackgivGit</h3>
+</div>
+
+<div class="row">
+  <div class="column left">
+    <div class="container">
+        <h2 id="users">Users</h2>
+        <ul id="userr" style="list-style: none;">
+          <div>
+              <li id="star" class="box" >My top artist</li>
+          </div>
+          <div>
+            <li id="jackbloo" class="box" >My top tracks</li>
+          </div>
+          <div>
+            <li id="billy" class="box">My recommendation</li>
+          </div>
+
+    </div>
   </div>
-  <script
+  
+  <div class="column mid">
+    <div class="container1">
+        <input id="myInput" type="text" placeholder="search repo name..">
+        <h2 id="repo">Repositories</h2>
+        <ul id="repos-list">
+        </ul>
+    </div>
+    <div class="signIn">
+      <img src="https://og.github.com/mark/github-mark@1200x630.png" style="width: 200px; height: 100px;" alt="">
+      <h1>HacktivGit</h1> 
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <form id="spotify-form">
+        <input type="submit">
+      </form>
+    </div>
+
+    
+  </div>
+  
+  <div class="column right">
+    <div class="container2">
+        <h2>Create Git Repository</h2>
+
+    </div>
+    </div>
+  </div>
+</div>
+<script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script>
-    function onSignIn(googleUser) {
-      let id_token = googleUser.getAuthResponse().id_token;
-      $.ajax({
-        method: 'post',
-        url: 'http://localhost:3000/api/login/google',
-        data: {
-          id_token
-        }
-      })
-      .done((data) => {
-        localStorage.setItem('token',data)
-      })
-      .fail((jqXHR,err) => {
-        console.error(jqXHR);
-      })
-    }
-    
-    function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
-      });
-    }
-  </script>
+  <script src="js/index.js"></script>
 </body>
 </html>

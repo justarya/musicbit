@@ -4,13 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Music Bit</title>
-  <link href="https://fonts.googleapis.com/css?family=Hind|Lexend+Deca&display=swap" rel="stylesheet"> 
+  <meta name="google-signin-client_id" content="383156229925-le9tg6ei1naqmu11irgmo4c1e8s3hdvl.apps.googleusercontent.com">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- chart -->  
+  <!-- 3d doughnat -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+  <!-- circle -->
+  <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
+  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+
+  <!-- line -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <!-- highchart close -->
+  
+  <!-- MUSIC -->
+  <link href="https://fonts.googleapis.com/css?family=Hind|Akronim|Lexend+Deca&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="/vendors/wowjs/css/libs/animate.css">
   <link rel="stylesheet" href="/css/music.css">
+
+  <title>MUSIC BIT</title>
 </head>
+
+
 <body>
-  <div id="music-discovery">
+  <div id="main" class="main">
+    <div class="title">
+      <h1>MUSIC BIT</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor</p>
+      <p>sit amet consectetur adipisicing elit.</p>
+    </div>
+    
+    <div class="btn-start">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+    
+  </div>
+  <div id="spotify--login">
+    <form action="" id="spotify-form">
+      <button type="submit">Login to Spotify</button>
+    </form>
+  </div>
+  <div id="music-stats">
     <section id="hello">
       <div class="container">
         <div class="msg--big center">
@@ -129,23 +171,21 @@
     </section>
   </div>
   <script src="/vendors/wowjs/js/wow.min.js"></script>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="/js/index.js"></script>
   <script>
-  new WOW().init();
-  $('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+      new WOW().init();
+      $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
     });
-});
   </script>
 </body>
 </html>

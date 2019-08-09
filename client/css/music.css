@@ -56,6 +56,38 @@
   color: black;
 }
 
+#music-stats #top-track-2 .track-top-number {
+  color: black;
+}
+
+#music-stats #top-track-2 .track--desc__artist span {
+  background: black;
+  color: white;
+}
+
+#music-stats #top-genre {
+  background: black;
+  color: white;
+}
+
+#music-stats #current-listening-time {
+  color: white;
+  background-image: linear-gradient(69.8deg, #19316c 2.8%, #01b3c9 97.8%);
+}
+
+#music-stats .logout {
+  position: fixed;
+  top: 30px;
+  text-decoration: none;
+  color: White;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  right: 60px;
+}
+
+#music-stats .size--flex {
+  min-height: auto !important;
+}
+
 #music-stats section {
   min-height: 100vh;
   clear: both;
@@ -123,7 +155,7 @@
   color: white;
   position: absolute;
   top: 30px;
-  left: 30px;
+  left: 0px;
 }
 
 #music-stats section .track .track-top-number span {

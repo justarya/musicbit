@@ -9,6 +9,16 @@
   /* getstarted */
 }
 
+#main .title h1 {
+  font-family: 'Akronim', cursive;
+  text-align: center;
+  font-size: 160px;
+  font-style: bold;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 #main .container {
   width: 1000px;
   margin: 0 auto;
@@ -39,12 +49,6 @@
   text-align: center;
 }
 
-#main .title p {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 2rem;
-}
-
 #main .chart1 {
   background-color: none;
 }
@@ -63,8 +67,6 @@
 }
 
 #main .title h1 {
-  font-family: 'Akronim', cursive;
-  font-size: 160px;
   font-style: bold;
   color: #fff;
   -webkit-transition: 0.5s;
@@ -75,14 +77,14 @@
   color: #e4edf5;
 }
 
-#main .title h5 {
+#main .title h4 {
   color: #fff;
   text-align: center;
 }
 
 #main .btn-start {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -112,5 +114,10 @@
 
 #main .charset .btn-group {
   text-align: center;
+}
+
+#main #3d-doughnut canvas {
+  width: 500px;
+  height: 400px;
 }
 /*# sourceMappingURL=style.css.map */

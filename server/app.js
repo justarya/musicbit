@@ -19,11 +19,14 @@ app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/musicbit', {useNewUrlParser: true});
 
+app.use('/', routes);
+
 app.use(function(err,req,res,next){
   res.status(500).json({
     error: err.message
   })
 });
+
 
 app.listen(port, () =>  console.log(`Server is runing in PORT: ${port}`));
 app.use('/music',musicRouter)

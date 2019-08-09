@@ -4,8 +4,16 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
+  
   background-image:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)), url(../img/main-bg3.jpg);
-  // background-color: black;
+  .title h1 {
+    font-family: 'Akronim', cursive;
+    text-align: center;
+    font-size: 160px;
+    font-style: bold;
+    color: #fff;
+    transition: 0.5s;
+  }
   .container {
     width: 1000px;
     margin: 0 auto;
@@ -54,8 +62,6 @@
   }
   
   .title h1 {
-    font-family: 'Akronim', cursive;
-    font-size: 160px;
     font-style: bold;
     color: #fff;
     transition: 0.5s;
@@ -103,5 +109,10 @@
   
   .charset .btn-group {
     text-align: center;
+  }
+
+  #3d-doughnut canvas {
+    width: 500px;
+    height: 400px;
   }
 }

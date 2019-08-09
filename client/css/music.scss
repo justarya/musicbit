@@ -6,7 +6,6 @@ $box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
   font-family: 'Hind', sans-serif;
 }
 #music-stats{
-
   .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -46,6 +45,39 @@ $box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
         color: black;
       }
     }
+  }
+  #top-track-2{
+    .track-top-number{
+      color: black;
+    }
+    .track--desc__artist{
+      span{
+        background: black;
+        color: white;
+      }
+    }
+  }
+  #top-genre{
+    background: black;
+    color: white;
+  }
+
+  #current-listening-time{
+    color: white;
+    background-image: linear-gradient( 69.8deg,  rgba(25,49,108,1) 2.8%, rgba(1,179,201,1) 97.8% );
+  }
+
+  .logout{
+    position: fixed;
+    top: 30px;
+    text-decoration: none;
+    color: White;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    right: 60px;
+  }
+  
+  .size--flex{
+    min-height: auto!important;
   }
   section {
     min-height: 100vh;
@@ -106,7 +138,7 @@ $box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
         color: white;
         position: absolute;
         top: 30px;
-        left: 30px;
+        left:0px;
         span{
           font-size: 50px;
         }

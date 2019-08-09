@@ -12,7 +12,7 @@ Highcharts.chart('3d-doughnut', {
         enabled: false // <-- jangan diganti
     },
     title: {
-        text: 'category' // <-- title
+        text: '' // <-- title
     },
     // subtitle: {
     //     text: 'butuh tidurr'

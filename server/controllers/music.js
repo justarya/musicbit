@@ -2,6 +2,7 @@ const axios = require('axios');
 const Model = require('../models');
 const jwt = require('../helpers/jwt');
 const checkWords = require('../helpers/checkWords')
+const SpotifyWebApi = require('spotify-web-api-node');
 
 class Music {
 
@@ -196,6 +197,32 @@ class Music {
             message: error.message
         })
       })
+    }
+
+    static signIn(req,res){
+      var redirectUri = 'http://localhost:3000/callback/';
+      var spotifyApi = new SpotifyWebApi({
+        clientId : 'b93f9dfa22ea42c497b30e547849305c',
+        clientSecret : '9cac2da6d7a1445694500ae88ddb2134',
+        redirectUri : redirectUri,
+      });
+      var authorizeURL = spotifyApi.createAuthorizeURL(['user-top-read playlist-read-collaborative user-read-recently-played user-read-currently-playing user-read-recently-played']);
+      response.send(authorizeURL);
+      
+    }
+
+    static redirect(req,res){
+      var authorizationCode = request.query.code;  
+      spotifyApi.authorizationCodeGrant(authorizationCode)
+      .then(function(data) {
+        spotifyApi.setAccessToken(data.body['access_token']);
+        spotifyApi.setRefreshToken(data.body['refresh_token']);
+        response.send(data.body)
+      }, function(err) {
+          res.status(500).json({
+          message: err.message
+        })
+      });
     }
 
     }

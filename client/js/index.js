@@ -25,6 +25,7 @@ $('document').ready(function(){
   });
   initial();
 })
+
 function initial(){
   if(isSignIn()){
     $('#main').hide();

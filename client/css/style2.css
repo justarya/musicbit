@@ -1,22 +1,10 @@
 #main {
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url(../img/main-bg3.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../img/main-bg3.jpg);
+  background-color: black;
+  /* --------- main ------------ */
   /* --------- title ------------ */
   /* getstarted */
-}
-
-#main .title h1 {
-  font-family: 'Akronim', cursive;
-  text-align: center;
-  font-size: 160px;
-  font-style: bold;
-  color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 #main .container {
@@ -58,6 +46,14 @@
   max-height: 400px;
 }
 
+#main .main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7))), url(../img/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/bg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 #main .title {
   position: absolute;
   top: 40%;
@@ -67,17 +63,19 @@
 }
 
 #main .title h1 {
+  font-size: 100px;
+  font-size: 160px;
   font-style: bold;
-  color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  color: rgb(224, 214, 214);
+  transition: 0.3s;
 }
 
-#main .title h1:hover {
-  color: #e4edf5;
+.main-title h1:hover {
+  font-size: 160.3px;
+  color: #fff
 }
 
-#main .title h4 {
+#main p {
   color: #fff;
   text-align: center;
 }
@@ -114,10 +112,5 @@
 
 #main .charset .btn-group {
   text-align: center;
-}
-
-#main #3d-doughnut canvas {
-  width: 500px;
-  height: 400px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -53,14 +53,6 @@
     max-height: 400px;
   }
   
-  /* --------- main ------------ */
-  .main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/bg.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
-  
   /* --------- title ------------ */
   .title {
     position: absolute;
@@ -72,9 +64,15 @@
   .title h1 {
     font-style: bold;
     color: #fff;
+    transition: 0.5s;
+  }
+
+  .title h1:hover {
+    color: rgb(228, 237, 245);
+    // font-size: 160.2px;
   }
   
-  p {
+  .title h4 {
     color: #fff;
     text-align: center
   }

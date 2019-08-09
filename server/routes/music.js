@@ -2,7 +2,7 @@ const router = require('express').Router();
 const controllers = require('../controllers/music.js');
 
 // router.get('/',controllers.music);
-router.get('/recommendation', controllers.getRecommendation)
+// router.get('/recommendation', controllers.getRecommendation)
 router.get('/getArtists', controllers.getTopArtist)
 router.get('/getTracks', controllers.getTopTracks)
 router.get('/getRecent', controllers.getRecent)

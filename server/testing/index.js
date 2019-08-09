@@ -4,7 +4,6 @@ $(function() {
       $.get('http://localhost:3000/music/authorize' + $.param(), function(data) {
         window.location = data;
       }).then(data => {
-        console.log(req.body)
       })
   });
 })()

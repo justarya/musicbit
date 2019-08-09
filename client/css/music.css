@@ -4,7 +4,7 @@
   font-family: 'Hind', sans-serif;
 }
 
-.container {
+#music-stats .container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -12,73 +12,103 @@
 }
 
 @media (min-width: 768px) {
-  .container {
+  #music-stats .container {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  #music-stats .container {
     width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  #music-stats .container {
     width: 1170px;
   }
 }
 
-#hello {
+#music-stats #hello {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#53ff5c), to(#00445f));
   background-image: linear-gradient(#53ff5c, #00445f);
 }
 
-section {
+#music-stats #top-track-1 {
+  background: black;
+  color: white;
+}
+
+#music-stats #top-track-1 .title {
+  color: white;
+}
+
+#music-stats #top-track-1 .album-art {
+  -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+          box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#music-stats #top-track-1 .track {
+  color: white;
+}
+
+#music-stats #top-track-1 .track .track--desc__artist {
+  color: black;
+}
+
+#music-stats section {
   min-height: 100vh;
   clear: both;
   display: block;
   background-attachment: fixed;
 }
 
-section .msg--big {
+#music-stats section .next {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#music-stats section .msg--big {
   padding: 10vh 0;
 }
 
-section .msg--big h2 {
+#music-stats section .msg--big h2 {
   line-height: 1em;
   margin: 15px 0;
   font-size: 4em;
 }
 
-section .msg--big h1 {
+#music-stats section .msg--big h1 {
   line-height: 1em;
   margin: 20px 0;
   font-size: 6em;
 }
 
-section .title {
+#music-stats section .title {
   padding-top: 90px;
 }
 
-section .title h1 {
+#music-stats section .title h1 {
   line-height: 1em;
   margin: 20px 0;
   font-size: 4em;
 }
 
-section .center {
+#music-stats section .center {
   padding: 20vh 0;
 }
 
-section .track {
+#music-stats section .track {
   padding: 70px 0;
   padding-left: 70px;
   position: relative;
   display: inline-block;
 }
 
-section .track .album-art {
+#music-stats section .track .album-art {
   width: 350px;
   height: 350px;
   background-size: cover;
@@ -87,7 +117,7 @@ section .track .album-art {
   float: left;
 }
 
-section .track .track-top-number {
+#music-stats section .track .track-top-number {
   font-weight: bold;
   font-size: 70px;
   color: white;
@@ -96,22 +126,22 @@ section .track .track-top-number {
   left: 30px;
 }
 
-section .track .track-top-number span {
+#music-stats section .track .track-top-number span {
   font-size: 50px;
 }
 
-section .track .track--desc {
+#music-stats section .track .track--desc {
   padding: 10px 40px;
   height: 300px;
   float: left;
 }
 
-section .track .track--desc .track--desc__title {
+#music-stats section .track .track--desc .track--desc__title {
   font-size: 2.5em;
   line-height: 1.5em;
 }
 
-section .track .track--desc .track--desc__artist span {
+#music-stats section .track .track--desc .track--desc__artist span {
   font-size: 25px;
   background: white;
   padding: 0px 10px;
@@ -119,45 +149,45 @@ section .track .track--desc .track--desc__artist span {
   margin-left: -10px;
 }
 
-section .track--item--container {
+#music-stats section .track--item--container {
   display: flow-root;
   padding-bottom: 40px;
 }
 
-section .track--item {
+#music-stats section .track--item {
   float: left;
   width: 25%;
   padding-top: 50px;
   padding-left: 40px;
 }
 
-section .track--item img {
+#music-stats section .track--item img {
   width: 100%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-section .track--item img:hover {
+#music-stats section .track--item img:hover {
   -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
           box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
 }
 
-section .track--item .album-art {
+#music-stats section .track--item .album-art {
   width: 200px;
   height: 200px;
   background-size: cover;
 }
 
-section .track--item .track--desc__title {
+#music-stats section .track--item .track--desc__title {
   padding-top: 10px;
   font-size: 25px;
   margin-top: -40px;
   margin-left: -20px;
 }
 
-section .track--item .track--desc__title span {
+#music-stats section .track--item .track--desc__title span {
   background: white;
   padding: 5px 10px;
   font-weight: normal;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=music.css.map */

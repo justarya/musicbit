@@ -1,21 +1,23 @@
-/*# sourceMappingURL=style.css.map */
-*{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+#main {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  /* --------- main ------------ */
+  /* --------- title ------------ */
+  /* getstarted */
 }
 
-.container {
+#main .container {
   width: 1000px;
   margin: 0 auto;
 }
 
-.container .box {
+#main .container .box {
   width: 25%;
   float: left;
 }
 
-.container .box .chart {
+#main .container .box .chart {
   position: relative;
   width: 110px;
   height: 110px;
@@ -25,82 +27,83 @@
   line-height: 110px;
 }
 
-.container .box canvas {
+#main .container .box canvas {
   position: absolute;
   left: 0;
   right: 0;
 }
 
-.box h4 {
+#main .box h4 {
   text-align: center;
 }
 
-.chart1 {
+#main .chart1 {
   background-color: none;
 }
 
-#chart2 {
+#main #chart2 {
   max-width: 400px;
   max-height: 400px;
 }
 
-/* --------- main ------------ */
-.main {
+#main .main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7))), url(../img/bg.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/bg.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
 
-/* --------- title ------------ */
-.title {
+#main .title {
   position: absolute;
-  top: 40%; 
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.title h1 {
+#main .title h1 {
   font-size: 100px;
   font-style: bold;
   color: #fff;
 }
 
-p {
+#main p {
   color: #fff;
-  text-align: center
+  text-align: center;
 }
 
-/* getstarted */
-.btn-start {
+#main .btn-start {
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.btn-start .btn-outline-secondary {
+#main .btn-start .btn-outline-secondary {
   border-radius: 20px;
   /* color: #fff;
-  border-color: #fff; */
+    border-color: #fff; */
   padding-right: 2rem;
   padding-left: 2rem;
+  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
-.btn-start .btn-outline-secondary:hover {
+#main .btn-start .btn-outline-secondary:hover {
   color: #fff;
   padding-right: 3rem;
   padding-left: 3rem;
 }
 
-
-.title-label{
+#main .title-label {
   margin-top: 4rem !important;
   margin-bottom: 3rem;
   text-align: center;
 }
 
-.charset .btn-group {
+#main .charset .btn-group {
   text-align: center;
 }
+/*# sourceMappingURL=style.css.map */

@@ -9,5 +9,6 @@ router.get('/getRecent', controllers.getRecent)
 router.get('/kanye', controllers.getKanye)
 router.get('/getTime', controllers.getTime)
 router.get('/getGenre', controllers.getGenre)
+router.get('/getProfile', controllers.getProfile)
 
 module.exports = router;

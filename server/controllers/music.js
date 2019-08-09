@@ -8,7 +8,7 @@ class Music {
     static getTopTracks(req,res){
         axios.get('https://api.spotify.com/v1/me/top/tracks', {
             headers: {
-              Authorization: 'Bearer BQD1vLZzSK6gCtAu5atwQUjyd9u1GxcUDBnfOPARTr8FkCg3kZ2qhTrJm4NbRuvvZ0FGIfXz_UquN2ZE_ZPVPq-twW7djQqZVn3u49n7FqipX2wNjj17lmuPtrv68rIACgSvS8S2qJHJc0dwv5U_MY-mBfAEi9U'
+              Authorization: `Bearer ${req.body.spotify_token}`
             }
           })
           .then(function (response) {
@@ -27,7 +27,7 @@ class Music {
     static getTopArtist(req,res){
         axios.get('https://api.spotify.com/v1/me/top/artists', {
             headers: {
-              Authorization: 'Bearer BQD1vLZzSK6gCtAu5atwQUjyd9u1GxcUDBnfOPARTr8FkCg3kZ2qhTrJm4NbRuvvZ0FGIfXz_UquN2ZE_ZPVPq-twW7djQqZVn3u49n7FqipX2wNjj17lmuPtrv68rIACgSvS8S2qJHJc0dwv5U_MY-mBfAEi9U'
+              Authorization: `Bearer ${req.body.spotify_token}`
             }
           })
           .then(function (response) {
@@ -46,7 +46,7 @@ class Music {
     static getRecommendation(req,res){
         axios.get('  https://api.spotify.com/v1/recommendations', {
             headers: {
-              Authorization: 'Bearer BQD1vLZzSK6gCtAu5atwQUjyd9u1GxcUDBnfOPARTr8FkCg3kZ2qhTrJm4NbRuvvZ0FGIfXz_UquN2ZE_ZPVPq-twW7djQqZVn3u49n7FqipX2wNjj17lmuPtrv68rIACgSvS8S2qJHJc0dwv5U_MY-mBfAEi9U'
+              Authorization: `Bearer ${req.body.spotify_token}`
             }
           })
           .then(function (response) {
@@ -65,7 +65,7 @@ class Music {
     static getRecent(req,res){
       axios.get('https://api.spotify.com/v1/me/player/recently-played', {
         headers: {
-          Authorization: 'Bearer BQCvK3KZrYDI3SHivUSFm8gtQ9c2fdAFDcv3svPlhRxdmZFI5V4cyR-J4OVxOQuz10P_kFie3I5SJdkRdKV7EQOmm-3RGjN9U3ETKynijDM6xNQ5Av2i1soJBZC91Zt7CxbQxBLGZNbGBT0jnzES4__2ArRuqLv7Tg'
+          Authorization: `Bearer ${req.body.spotify_token}`
         }
       })
       .then(function (response) {
@@ -102,7 +102,7 @@ class Music {
     static getTime(req,res){
       axios.get('https://api.spotify.com/v1/me/player/recently-played', {
         headers: {
-          Authorization: 'Bearer BQA9wjVTRL4CehbMonvIiXya9rI9Ba1xehGx_JOj8RdpNza3HlbwYVIsdpYxi-l22GR3QONMLGwLd_YNacGUpLhb_3s2DrzY7bzyRtY9VoBL2cxEC3nUAYRZMrXf4Gx4i4C9_hBOfD1Yg3QWQn0wx1a6D6JqO8S04A'
+          Authorization: `Bearer ${req.body.spotify_token}`
         }
       })
       .then(function (response) {
@@ -130,7 +130,7 @@ class Music {
     static getGenre(req,res){
       axios.get('https://api.spotify.com/v1/me/player/recently-played', {
         headers: {
-          Authorization: 'Bearer BQC9wow3Bc4tIsOjsN1We5Ye79cIMPuUeIWemqi2VTuXU1QETgb-NL2o7xUUwaM9ol_GcABBBkrau7nVlm-7yEBAFh3LKIEniMCaAgB21eyoV4LvlCbSb_QQ7MW-piBjowqy_ikfG2fBpVLzs874MF2jiZGAZzvucg'
+          Authorization: `Bearer ${req.body.spotify_token}`
         }
       })
       .then(function (response) {
@@ -141,7 +141,7 @@ class Music {
           for(let j in recentCollection[i].track.album.artists){
             let promise = axios.get(`https://api.spotify.com/v1/artists/${recentCollection[i].track.album.artists[j].id}`,{
                 headers: {
-                  Authorization: 'Bearer BQC9wow3Bc4tIsOjsN1We5Ye79cIMPuUeIWemqi2VTuXU1QETgb-NL2o7xUUwaM9ol_GcABBBkrau7nVlm-7yEBAFh3LKIEniMCaAgB21eyoV4LvlCbSb_QQ7MW-piBjowqy_ikfG2fBpVLzs874MF2jiZGAZzvucg'
+                  Authorization: `Bearer ${req.body.spotify_token}`
                 }
               })
             artistPromises.push(promise);
@@ -177,6 +177,26 @@ class Music {
       })
     }
 
+
+    static getProfile(req,res){
+      axios.get('https://api.spotify.com/v1/me', {
+        headers: {
+          Authorization: `Bearer ${req.body.spotify_token}`
+        }
+      })
+      .then(function (response) {
+        const recentCollection = response.data
+        res.status(200).json({
+            recentCollection
+        });
+      })
+      .catch(function (error) {
+        console.log(error)
+        res.status(500).json({
+            message: error.message
+        })
+      })
+    }
 
     }
   
